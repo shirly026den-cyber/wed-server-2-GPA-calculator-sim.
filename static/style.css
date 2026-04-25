@@ -1,0 +1,70 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 40px;
+}
+
+input{
+    background-color: #edeef1;
+    width: 300px;
+    padding: 13px;
+    margin-right: 10px;
+    border: 1px solid #63656a;
+    border-radius: 2px;
+}
+
+.subjects_cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding : 18px;
+}
+
+.row{
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+button{
+    display : block;
+    padding: 10px ;
+    background-color: #7fa8d4;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button:hover{
+    background-color: #6e89a6;
+    size: 20px;
+}
+
+button:active{
+    transform : scale(0.98);
+}
+
+button:disabled{
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+button:calculating_mode{
+    opacity: 0.6;
+    animation : blink 1s linear infinite;
+}
+
+a#answer{
+    display: block;
+    margin-top: 20px;
+    width: 80%;
+    max-width:400px;
+    min-width:200px;
+    padding: 0px;
+    border-radius: 2px;
+}
