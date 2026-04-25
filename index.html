@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>GPACalculator</title>
+    
+    <link rel = "stylesheet" href = "{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>GPACalculator </h1>
+    <h2>Enter your grades</h2>
+
+    <div class="subjects_cards">
+
+        <div class="row">
+            <h3>Math</h3>
+            <input type="number" id="math" name="math" min="0" max="100" placeholder="Enter your math grade">
+            <input type="number" id="math_creditHours" name="math_creditHours" min="0" max="10" placeholder="Enter your math credit hours">
+        </div>
+
+        <div class="row">
+            <h3>Science</h3>
+            <input type="number" id="science" name="science" min="0" max="100" placeholder="Enter your science grade">
+            <input type="number" id="science_creditHours" name="science_creditHours" min="0" max="10" placeholder="Enter your science credit hours">
+        </div>
+
+        <div class="row">
+            <h3>English</h3>
+            <input type="number" id="english" name="english" min="0" max="100" placeholder="Enter your english grade">
+            <input type="number" id="english_creditHours" name="english_creditHours" min="0" max="10" placeholder="Enter your english credit hours">
+        </div>
+
+        <div class="row">
+            <h3>History</h3>
+            <input type="number" id="history" name="history" min="0" max="100" placeholder="Enter your history grade">
+            <input type="number" id="history_creditHours" name="history_creditHours" min="0" max="10" placeholder="Enter your history credit hours">
+        </div>
+
+        <div class="row">
+            <h3>Elective1</h3>
+            <input type="number" id="elective1" name="elective1" min="0" max="100" placeholder="Enter your elective1 grade">
+            <input type="number" id="elective1_creditHours" name="elective1_creditHours" min="0" max="10" placeholder="Enter your elective1 credit hours">
+        </div>
+
+        <div class="row">
+            <h3>Elective2</h3>
+            <input type="number" id="elective2" name="elective2" min="0" max="100" placeholder="Enter your elective2 grade">
+            <input type="number" id="elective2_creditHours" name="elective2_creditHours" min="0" max="10" placeholder="Enter your elective2 credit hours">
+        </div>
+
+    </div>
+  
+    <button onclick="calculateGPA()">Calculate GPA</button>
+
+    <p id="statusDisplay"></p>
+    <div id="GPAOutput"></div>
+    <!--清空输入框-->
+    <button onclick ="clearInput()">Clear</button>
+    <!--去static 文件夹里找 front文件-->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
